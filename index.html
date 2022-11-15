@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PP2.1_13</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //Bài 1
+    let myColor = ["Red","Green","White","Black"];
+    console.log(myColor.join(","));
+
+    //Bài 2
+    let number = +prompt('Nhập một số: ');
+    let str = number.toString();
+    let result = [str[0]];
+
+    for(let x = 1; x < str.length; x++) {
+        if((str[x - 1]%2 === 0)&&(str[x]%2 === 0)) {
+            result.push('-', str[x]);
+        } else {
+            result.push(str[x]);
+        }
+    }
+    alert(result.join(''));
+
+    // Bài 3
+    let text = prompt('Nhập: ');
+    let a = text.split("");
+    for(let i = 0; i < a.length; i++) {
+        if(a[i] === a[i].toUpperCase()) {
+            a[i] = a[i].toLowerCase();
+        } else if(a[i] === a[i].toLowerCase()) {
+            a[i] = a[i].toUpperCase();
+        }
+    }
+    console.log(a)
+</script>
+</html>
